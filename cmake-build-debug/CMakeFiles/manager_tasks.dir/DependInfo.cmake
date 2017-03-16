@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ivan/Videos/manager/BL/Menu.cpp" "/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o"
-  "/home/ivan/Videos/manager/DTO/DTOTask.cpp" "/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o"
-  "/home/ivan/Videos/manager/Entity/Task.cpp" "/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o"
-  "/home/ivan/Videos/manager/main.cpp" "/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles/manager_tasks.dir/main.cpp.o"
+  "/home/ivan/CLionProjects/Manager_Task/team_04/BL/Menu.cpp" "/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o"
+  "/home/ivan/CLionProjects/Manager_Task/team_04/DTO/DTOTask.cpp" "/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o"
+  "/home/ivan/CLionProjects/Manager_Task/team_04/Entity/Task.cpp" "/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o"
+  "/home/ivan/CLionProjects/Manager_Task/team_04/main.cpp" "/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles/manager_tasks.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

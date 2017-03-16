@@ -43,10 +43,10 @@ RM = /home/ivan/Videos/clion-2016.3.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/Videos/manager
+CMAKE_SOURCE_DIR = /home/ivan/CLionProjects/Manager_Task/team_04
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/Videos/manager/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/manager_tasks.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/manager_tasks.dir/flags.make
 
 CMakeFiles/manager_tasks.dir/main.cpp.o: CMakeFiles/manager_tasks.dir/flags.make
 CMakeFiles/manager_tasks.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/manager_tasks.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager_tasks.dir/main.cpp.o -c /home/ivan/Videos/manager/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/manager_tasks.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager_tasks.dir/main.cpp.o -c /home/ivan/CLionProjects/Manager_Task/team_04/main.cpp
 
 CMakeFiles/manager_tasks.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/manager_tasks.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Videos/manager/main.cpp > CMakeFiles/manager_tasks.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/CLionProjects/Manager_Task/team_04/main.cpp > CMakeFiles/manager_tasks.dir/main.cpp.i
 
 CMakeFiles/manager_tasks.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/manager_tasks.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Videos/manager/main.cpp -o CMakeFiles/manager_tasks.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/CLionProjects/Manager_Task/team_04/main.cpp -o CMakeFiles/manager_tasks.dir/main.cpp.s
 
 CMakeFiles/manager_tasks.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/manager_tasks.dir/main.cpp.o.provides.build: CMakeFiles/manager_tasks
 
 CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o: CMakeFiles/manager_tasks.dir/flags.make
 CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o: ../Entity/Task.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o -c /home/ivan/Videos/manager/Entity/Task.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o -c /home/ivan/CLionProjects/Manager_Task/team_04/Entity/Task.cpp
 
 CMakeFiles/manager_tasks.dir/Entity/Task.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/manager_tasks.dir/Entity/Task.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Videos/manager/Entity/Task.cpp > CMakeFiles/manager_tasks.dir/Entity/Task.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/CLionProjects/Manager_Task/team_04/Entity/Task.cpp > CMakeFiles/manager_tasks.dir/Entity/Task.cpp.i
 
 CMakeFiles/manager_tasks.dir/Entity/Task.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/manager_tasks.dir/Entity/Task.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Videos/manager/Entity/Task.cpp -o CMakeFiles/manager_tasks.dir/Entity/Task.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/CLionProjects/Manager_Task/team_04/Entity/Task.cpp -o CMakeFiles/manager_tasks.dir/Entity/Task.cpp.s
 
 CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o.provides.build: CMakeFiles/manage
 
 CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o: CMakeFiles/manager_tasks.dir/flags.make
 CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o: ../BL/Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o -c /home/ivan/Videos/manager/BL/Menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o -c /home/ivan/CLionProjects/Manager_Task/team_04/BL/Menu.cpp
 
 CMakeFiles/manager_tasks.dir/BL/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/manager_tasks.dir/BL/Menu.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Videos/manager/BL/Menu.cpp > CMakeFiles/manager_tasks.dir/BL/Menu.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/CLionProjects/Manager_Task/team_04/BL/Menu.cpp > CMakeFiles/manager_tasks.dir/BL/Menu.cpp.i
 
 CMakeFiles/manager_tasks.dir/BL/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/manager_tasks.dir/BL/Menu.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Videos/manager/BL/Menu.cpp -o CMakeFiles/manager_tasks.dir/BL/Menu.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/CLionProjects/Manager_Task/team_04/BL/Menu.cpp -o CMakeFiles/manager_tasks.dir/BL/Menu.cpp.s
 
 CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o.provides.build: CMakeFiles/manager_ta
 
 CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o: CMakeFiles/manager_tasks.dir/flags.make
 CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o: ../DTO/DTOTask.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o -c /home/ivan/Videos/manager/DTO/DTOTask.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o -c /home/ivan/CLionProjects/Manager_Task/team_04/DTO/DTOTask.cpp
 
 CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/Videos/manager/DTO/DTOTask.cpp > CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivan/CLionProjects/Manager_Task/team_04/DTO/DTOTask.cpp > CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.i
 
 CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/Videos/manager/DTO/DTOTask.cpp -o CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivan/CLionProjects/Manager_Task/team_04/DTO/DTOTask.cpp -o CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.s
 
 CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o.requires:
 
@@ -169,7 +169,7 @@ manager_tasks: CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o
 manager_tasks: CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o
 manager_tasks: CMakeFiles/manager_tasks.dir/build.make
 manager_tasks: CMakeFiles/manager_tasks.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable manager_tasks"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable manager_tasks"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/manager_tasks.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -189,6 +189,6 @@ CMakeFiles/manager_tasks.dir/clean:
 .PHONY : CMakeFiles/manager_tasks.dir/clean
 
 CMakeFiles/manager_tasks.dir/depend:
-	cd /home/ivan/Videos/manager/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/Videos/manager /home/ivan/Videos/manager /home/ivan/Videos/manager/cmake-build-debug /home/ivan/Videos/manager/cmake-build-debug /home/ivan/Videos/manager/cmake-build-debug/CMakeFiles/manager_tasks.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivan/CLionProjects/Manager_Task/team_04 /home/ivan/CLionProjects/Manager_Task/team_04 /home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug /home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug /home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/CMakeFiles/manager_tasks.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/manager_tasks.dir/depend
 
