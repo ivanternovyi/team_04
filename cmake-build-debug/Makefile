@@ -48,24 +48,13 @@ RM = /home/ivan/Videos/clion-2016.3.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/CLionProjects/Manager
+CMAKE_SOURCE_DIR = /home/ivan/Videos/manager
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/CLionProjects/Manager/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ivan/Videos/manager/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/ivan/Videos/clion-2016.3.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -78,11 +67,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/ivan/Videos/clion-2016.3.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/CLionProjects/Manager/cmake-build-debug/CMakeFiles /home/ivan/CLionProjects/Manager/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Videos/manager/cmake-build-debug/CMakeFiles /home/ivan/Videos/manager/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/CLionProjects/Manager/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Videos/manager/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Manager
+# Target rules for targets named manager_tasks
 
 # Build rule for target.
-Manager: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Manager
-.PHONY : Manager
+manager_tasks: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 manager_tasks
+.PHONY : manager_tasks
 
 # fast build rule for target.
-Manager/fast:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/build
-.PHONY : Manager/fast
+manager_tasks/fast:
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/build
+.PHONY : manager_tasks/fast
 
 BL/Menu.o: BL/Menu.cpp.o
 
@@ -129,7 +129,7 @@ BL/Menu.o: BL/Menu.cpp.o
 
 # target to build an object file
 BL/Menu.cpp.o:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/BL/Menu.cpp.o
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o
 .PHONY : BL/Menu.cpp.o
 
 BL/Menu.i: BL/Menu.cpp.i
@@ -138,7 +138,7 @@ BL/Menu.i: BL/Menu.cpp.i
 
 # target to preprocess a source file
 BL/Menu.cpp.i:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/BL/Menu.cpp.i
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/BL/Menu.cpp.i
 .PHONY : BL/Menu.cpp.i
 
 BL/Menu.s: BL/Menu.cpp.s
@@ -147,35 +147,35 @@ BL/Menu.s: BL/Menu.cpp.s
 
 # target to generate assembly for a file
 BL/Menu.cpp.s:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/BL/Menu.cpp.s
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/BL/Menu.cpp.s
 .PHONY : BL/Menu.cpp.s
 
-DTO/Data.o: DTO/Data.cpp.o
+DTO/DTOTask.o: DTO/DTOTask.cpp.o
 
-.PHONY : DTO/Data.o
+.PHONY : DTO/DTOTask.o
 
 # target to build an object file
-DTO/Data.cpp.o:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/DTO/Data.cpp.o
-.PHONY : DTO/Data.cpp.o
+DTO/DTOTask.cpp.o:
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o
+.PHONY : DTO/DTOTask.cpp.o
 
-DTO/Data.i: DTO/Data.cpp.i
+DTO/DTOTask.i: DTO/DTOTask.cpp.i
 
-.PHONY : DTO/Data.i
+.PHONY : DTO/DTOTask.i
 
 # target to preprocess a source file
-DTO/Data.cpp.i:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/DTO/Data.cpp.i
-.PHONY : DTO/Data.cpp.i
+DTO/DTOTask.cpp.i:
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.i
+.PHONY : DTO/DTOTask.cpp.i
 
-DTO/Data.s: DTO/Data.cpp.s
+DTO/DTOTask.s: DTO/DTOTask.cpp.s
 
-.PHONY : DTO/Data.s
+.PHONY : DTO/DTOTask.s
 
 # target to generate assembly for a file
-DTO/Data.cpp.s:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/DTO/Data.cpp.s
-.PHONY : DTO/Data.cpp.s
+DTO/DTOTask.cpp.s:
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.s
+.PHONY : DTO/DTOTask.cpp.s
 
 Entity/Task.o: Entity/Task.cpp.o
 
@@ -183,7 +183,7 @@ Entity/Task.o: Entity/Task.cpp.o
 
 # target to build an object file
 Entity/Task.cpp.o:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/Entity/Task.cpp.o
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o
 .PHONY : Entity/Task.cpp.o
 
 Entity/Task.i: Entity/Task.cpp.i
@@ -192,7 +192,7 @@ Entity/Task.i: Entity/Task.cpp.i
 
 # target to preprocess a source file
 Entity/Task.cpp.i:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/Entity/Task.cpp.i
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/Entity/Task.cpp.i
 .PHONY : Entity/Task.cpp.i
 
 Entity/Task.s: Entity/Task.cpp.s
@@ -201,7 +201,7 @@ Entity/Task.s: Entity/Task.cpp.s
 
 # target to generate assembly for a file
 Entity/Task.cpp.s:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/Entity/Task.cpp.s
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/Entity/Task.cpp.s
 .PHONY : Entity/Task.cpp.s
 
 main.o: main.cpp.o
@@ -210,7 +210,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -219,7 +219,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -228,7 +228,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -237,15 +237,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Manager"
+	@echo "... edit_cache"
+	@echo "... manager_tasks"
 	@echo "... BL/Menu.o"
 	@echo "... BL/Menu.i"
 	@echo "... BL/Menu.s"
-	@echo "... DTO/Data.o"
-	@echo "... DTO/Data.i"
-	@echo "... DTO/Data.s"
+	@echo "... DTO/DTOTask.o"
+	@echo "... DTO/DTOTask.i"
+	@echo "... DTO/DTOTask.s"
 	@echo "... Entity/Task.o"
 	@echo "... Entity/Task.i"
 	@echo "... Entity/Task.s"

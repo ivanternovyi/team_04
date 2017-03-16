@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/manager_tasks.dir/main.cpp.o CMakeFiles/manager_tasks.dir/Entity/Task.cpp.o CMakeFiles/manager_tasks.dir/BL/Menu.cpp.o CMakeFiles/manager_tasks.dir/DTO/DTOTask.cpp.o  -o manager_tasks 

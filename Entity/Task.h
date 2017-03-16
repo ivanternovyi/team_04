@@ -1,25 +1,38 @@
-#ifndef MANAGER_TASK_H
-#define MANAGER_TASK_H
+#ifndef MANAGER_TASKS_TASK_H
+#define MANAGER_TASKS_TASK_H
+#pragma once
+#include <fstream>
+#include <iostream>
+#include <vector>
 #include <string>
+
 
 using namespace std;
 
-class Task {
-private:
-    string name;
+class Task
+{
     string state;
+    string name;
 public:
-    Task():name(""), state(""){};
+    Task() {}
 
-    Task(string n, string s):name(n), state(s){};
+    Task(string name, string state)
+    {
+        this->name = name;
+        this->state = state;
+    }
 
-    void set_name(string s);
+    void set_state(string state);
 
-    void set_state(string st);
+    string get_state();
+
+    void set_name(string name);
 
     string get_name();
 
-    string get_state();
+    friend istream& operator >> (istream& is, Task &task);
+
+    void show_all_task(); //should be in Menu.cpp
 };
 
 

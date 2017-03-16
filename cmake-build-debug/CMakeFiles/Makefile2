@@ -54,45 +54,45 @@ RM = /home/ivan/Videos/clion-2016.3.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/CLionProjects/Manager
+CMAKE_SOURCE_DIR = /home/ivan/Videos/manager
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/CLionProjects/Manager/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ivan/Videos/manager/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/Manager.dir
+# Target rules for target CMakeFiles/manager_tasks.dir
 
 # All Build rule for target.
-CMakeFiles/Manager.dir/all:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/depend
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ivan/CLionProjects/Manager/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target Manager"
-.PHONY : CMakeFiles/Manager.dir/all
+CMakeFiles/manager_tasks.dir/all:
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/depend
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ivan/Videos/manager/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target manager_tasks"
+.PHONY : CMakeFiles/manager_tasks.dir/all
 
 # Include target in all.
-all: CMakeFiles/Manager.dir/all
+all: CMakeFiles/manager_tasks.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Manager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/CLionProjects/Manager/cmake-build-debug/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Manager.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/CLionProjects/Manager/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/Manager.dir/rule
+CMakeFiles/manager_tasks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Videos/manager/cmake-build-debug/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/manager_tasks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/Videos/manager/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/manager_tasks.dir/rule
 
 # Convenience name for target.
-Manager: CMakeFiles/Manager.dir/rule
+manager_tasks: CMakeFiles/manager_tasks.dir/rule
 
-.PHONY : Manager
-
-# clean rule for target.
-CMakeFiles/Manager.dir/clean:
-	$(MAKE) -f CMakeFiles/Manager.dir/build.make CMakeFiles/Manager.dir/clean
-.PHONY : CMakeFiles/Manager.dir/clean
+.PHONY : manager_tasks
 
 # clean rule for target.
-clean: CMakeFiles/Manager.dir/clean
+CMakeFiles/manager_tasks.dir/clean:
+	$(MAKE) -f CMakeFiles/manager_tasks.dir/build.make CMakeFiles/manager_tasks.dir/clean
+.PHONY : CMakeFiles/manager_tasks.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/manager_tasks.dir/clean
 
 .PHONY : clean
 

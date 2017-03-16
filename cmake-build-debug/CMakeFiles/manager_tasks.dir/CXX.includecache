@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ivan/Videos/manager/BL/Menu.cpp
+
+/home/ivan/Videos/manager/DTO/DTOTask.cpp
+DTOTask.h
+/home/ivan/Videos/manager/DTO/DTOTask.h
+
+/home/ivan/Videos/manager/DTO/DTOTask.h
+fstream
+-
+iostream
+-
+../Entity/Task.h
+/home/ivan/Videos/manager/Entity/Task.h
+
+/home/ivan/Videos/manager/Entity/Task.cpp
+Task.h
+/home/ivan/Videos/manager/Entity/Task.h
+../DTO/DTOTask.h
+/home/ivan/Videos/manager/DTO/DTOTask.h
+
+/home/ivan/Videos/manager/Entity/Task.h
+fstream
+-
+iostream
+-
+vector
+-
+string
+-
+
+/home/ivan/Videos/manager/main.cpp
+Entity/Task.h
+/home/ivan/Videos/manager/Entity/Task.h
+DTO/DTOTask.h
+/home/ivan/Videos/manager/DTO/DTOTask.h
+BL/Menu.cpp
+/home/ivan/Videos/manager/BL/Menu.cpp
+
