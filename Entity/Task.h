@@ -31,8 +31,6 @@ public:
     string get_name();
 
     friend istream& operator >> (istream& is, Task &task);
-
-    void show_all_task(); //should be in Menu.cpp
 };
 
 
