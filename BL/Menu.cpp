@@ -2,7 +2,7 @@
 #include "../Entity/Task.h"
 #include"../DTO/DTOTask.h"
 #include"Menu.h"
-//should be redone
+
 using namespace std;
 
 
@@ -20,6 +20,16 @@ int first_menu()
 	cin >> choose;
     return choose;
 }
+void show_all_task()   
+{
+	vector<Task> tasks(DTOTask::write_from_file());
+	cout << "Name: " << "\t" << "State: " << endl;
+	for (int i = 0; i < tasks.size(); i++)
+	{
+		cout << tasks[i].get_name() << "\t" << tasks[i].get_state() << endl;
+	}
+}
+
 void menu (DTOTask &d, Task &t)
 {
     int your_choice = 0;
@@ -28,30 +38,28 @@ void menu (DTOTask &d, Task &t)
         switch (your_choice){
             case 1:
             {
-				t.show_all_task();
-				system("pause>null");
-        //        system("cls");
+		show_all_task();
+		system("pause>null");
+                system("cls");
                 break;
            }
 
 
             case 2:
             {
-				add_new_task(t, d);
-				cin.get();
+		add_new_task(t, d);
                 system("cls");
                 break;
             }
 
             case 3:
             {
-				cin.get();
                 system("cls");
-				break;
+		break;
             }
             case 4:
             {
-				cin.get();
+		
                 system("cls");
                 break;
             }
