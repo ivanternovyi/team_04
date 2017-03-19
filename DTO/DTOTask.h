@@ -14,6 +14,8 @@ public:
     static vector<Task> write_from_file();
     //write task to file ../data/Task.txt
     void write_to_file(Task obj);
+    //deleting task in file by given name
+    void delete_task(string given_name);
 };
 
 #endif

@@ -1,5 +1,9 @@
 #include "DTOTask.h"
+#include <string>
+#include <cstdio>
 
+
+using namespace std;
 
 vector<Task> DTOTask::write_from_file()
 {
@@ -37,4 +41,35 @@ void DTOTask::write_to_file(Task obj){
         cout << "File not found!" << endl;
     }
     file.close();
+}
+
+void DTOTask::delete_task(string given_name)
+{
+    ifstream file("../data/Task.txt");
+    ofstream out("../data/outfile.txt", ios::app);
+    string line, name;
+    int k = 0;
+    while(getline(file, line))
+    {
+        int pos = line.find(',');
+        while(k < pos)
+        {
+            name += line[k];
+            k++;
+        }
+        if(given_name == name)
+        {
+            continue;
+        }
+        else
+        {
+            out << line << "\n";
+        }
+        name.clear();
+        k = 0;
+    }
+    file.close();
+    out.close();
+    remove("../data/Task.txt");
+    rename("../data/outfile.txt","../data/Task.txt");
 }

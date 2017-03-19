@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug"/>
+				<Option working_dir="/home/ivan/Desktop/univer/team_04/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug"/>
+				<Option working_dir="/home/ivan/Desktop/univer/team_04/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug"/>
+				<Option working_dir="/home/ivan/Desktop/univer/team_04/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="manager_tasks">
-				<Option output="/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/manager_tasks" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug"/>
+				<Option output="/home/ivan/Desktop/univer/team_04/cmake-build-debug/manager_tasks" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ivan/Desktop/univer/team_04/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include/c++/4.8/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 manager_tasks"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 manager_tasks"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="manager_tasks/fast">
-				<Option output="/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/manager_tasks" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug"/>
+				<Option output="/home/ivan/Desktop/univer/team_04/cmake-build-debug/manager_tasks" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ivan/Desktop/univer/team_04/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,32 +77,35 @@
 					<Add directory="/usr/include/c++/4.8/backward"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 manager_tasks/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/CLionProjects/Manager_Task/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 manager_tasks/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ivan/Desktop/univer/team_04/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ivan/CLionProjects/Manager_Task/team_04/BL/Menu.cpp">
+		<Unit filename="/home/ivan/Desktop/univer/team_04/BL/Menu.cpp">
 			<Option target="manager_tasks"/>
 		</Unit>
-		<Unit filename="/home/ivan/CLionProjects/Manager_Task/team_04/DTO/DTOTask.cpp">
+		<Unit filename="/home/ivan/Desktop/univer/team_04/BL/Menu.h">
 			<Option target="manager_tasks"/>
 		</Unit>
-		<Unit filename="/home/ivan/CLionProjects/Manager_Task/team_04/DTO/DTOTask.h">
+		<Unit filename="/home/ivan/Desktop/univer/team_04/DTO/DTOTask.cpp">
 			<Option target="manager_tasks"/>
 		</Unit>
-		<Unit filename="/home/ivan/CLionProjects/Manager_Task/team_04/Entity/Task.cpp">
+		<Unit filename="/home/ivan/Desktop/univer/team_04/DTO/DTOTask.h">
 			<Option target="manager_tasks"/>
 		</Unit>
-		<Unit filename="/home/ivan/CLionProjects/Manager_Task/team_04/Entity/Task.h">
+		<Unit filename="/home/ivan/Desktop/univer/team_04/Entity/Task.cpp">
 			<Option target="manager_tasks"/>
 		</Unit>
-		<Unit filename="/home/ivan/CLionProjects/Manager_Task/team_04/main.cpp">
+		<Unit filename="/home/ivan/Desktop/univer/team_04/Entity/Task.h">
 			<Option target="manager_tasks"/>
 		</Unit>
-		<Unit filename="/home/ivan/CLionProjects/Manager_Task/team_04/CMakeLists.txt">
+		<Unit filename="/home/ivan/Desktop/univer/team_04/main.cpp">
+			<Option target="manager_tasks"/>
+		</Unit>
+		<Unit filename="/home/ivan/Desktop/univer/team_04/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

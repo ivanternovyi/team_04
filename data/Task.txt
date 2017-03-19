@@ -1,13 +1,8 @@
 NAME,STATE
 Name,State
-name,state
-NaMe,StaTe
-NaMe,StaTe
 Name_temp,State_temp
 Name_temp,State_temp
 Name_temp,State_temp
 Name_temp,State_temp
-Name_temp,State_temp
-Name_temp,State_temp
-Name_temp,State_temp
-Name_temp,State_temp
+name_menu,state_menu
+navchalna,345yh
