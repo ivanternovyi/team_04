@@ -31,10 +31,7 @@ void DTOTask::write_to_file(Task obj){
     ofstream file("../data/Task.txt", ios::app);
     if (file)
     {
-        file << obj.get_name ();
-        file << ",";
-        file << obj.get_state ();
-        file <<"\n";
+        file << obj;
     }
     else
     {

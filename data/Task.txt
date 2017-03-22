@@ -5,4 +5,6 @@ Name_temp,State_temp
 Name_temp,State_temp
 Name_temp,State_temp
 name_menu,state_menu
-navchalna,345yh
+navchalna,345yhlol
+lol,d
+test,test

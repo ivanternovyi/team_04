@@ -14,7 +14,7 @@ class Task
     string state;
     string name;
 public:
-    Task() {}
+    Task(): state(""), name(""){}
 
     Task(string name, string state)
     {
@@ -30,7 +30,9 @@ public:
 
     string get_name();
 
-    friend istream& operator >> (istream& is, Task &task);
+    friend istream& operator >> (istream& is, Task& task);
+
+    friend ostream& operator << (ostream& os, Task& task);
 };
 
 

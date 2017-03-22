@@ -21,7 +21,8 @@ string Task::get_name()
     return this->name;
 }
 
-istream& operator >> (istream& is, Task &task) //overload operator to parse line into task
+//overload operator to parse line into task
+istream& operator >> (istream& is, Task &task)
 {
     //temporary variable strTask to read from stream is
     string strTask;
@@ -45,4 +46,12 @@ istream& operator >> (istream& is, Task &task) //overload operator to parse line
     task.set_name(name);
     task.set_state(state);
     return is;
+}
+
+ostream& operator << (ostream& os, Task& task)
+{
+    os << task.get_name ();
+    os << ",";
+    os << task.get_state ();
+    os <<"\n";
 }

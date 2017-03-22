@@ -6,7 +6,7 @@
 int main()
 {
     DTOTask d;
-    Task tasks;
-    menu(d, tasks);
+    Task  task;
+    menu(d, task);
     return 0;
 }
