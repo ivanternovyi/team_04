@@ -1,6 +1,22 @@
 #include "Task.h"
 #include "../DTO/DTOTask.h"
 
+short Task::get_id()
+{
+    DTOTask d;
+    vector<Task>  tasks;
+    tasks = d.write_from_file();
+    this->id = tasks.size();
+    for(int i = 0; i < tasks.size(); i++)
+    {
+        if(this->name == tasks[i].get_name())
+        {
+            this->id = i;
+        }
+    }
+    return this->id;
+}
+
 void Task::set_state(string state)
 {
     this->state = state;
@@ -19,6 +35,36 @@ void Task::set_name(string name)
 string Task::get_name()
 {
     return this->name;
+}
+
+void Task::set_counter(short temp)
+{
+    this->counter = temp;
+}
+
+short Task::get_counter()
+{
+    if(state == "to_do")
+    {
+        counter = 0;
+    }
+    else if(state == "in_progress")
+    {
+        counter = 1;
+    }
+    else if(state == "varificate")
+    {
+        counter = 2;
+    }
+    else if(state == "done!")
+    {
+        counter = 3;
+    }
+    else
+    {
+        counter = -1; //means that task does not consists of mentioned states
+    }
+    return this->counter;
 }
 
 //overload operator to parse line into task

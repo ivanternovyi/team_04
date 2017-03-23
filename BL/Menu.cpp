@@ -12,7 +12,7 @@ int first_menu()
     cout << "***************************" << endl;
     cout << "1) Show all tasks" << endl;
     cout << "2) New task" << endl;
-    cout << "3) Update" << endl;						//update it
+    cout << "3) Update" << endl;
     cout << "4) Delete" << endl;
     cout << "5) Exit" << endl;
     cout << "***************************" << endl;
@@ -45,6 +45,7 @@ void menu (DTOTask &d, Task &t)
 
             case 3:
             {
+                update();
                 system("cls");
                 break;
             }
@@ -70,7 +71,7 @@ void add_new_task(Task& t, DTOTask& d)
     string name;
     cout << "Enter name: " << endl;
     cin >> name;
-    cout << "Enter state: " << endl;
+    cout << "Enter state('to_do', 'in_progress', 'varificate', 'done!'): " << endl;
     cin >> state;
     t.set_name(name);
     t.set_state(state);
@@ -90,9 +91,18 @@ void show_all_task()
 
 void erase_task()
 {
-    string given_name;
-    cout << "Input name of the task, which you want to delete: ";
-    cin >> given_name;
+    short id;
+    cout << "Input id of the task, which you want to delete: ";
+    cin >> id;
     DTOTask d;
-    d.delete_task(given_name);
+    d.delete_task(id);
+}
+
+void update()
+{
+    short id;
+    cout << "Input id of the task, which you want to update: ";
+    cin >> id;
+    DTOTask d;
+    d.update_task(id);
 }

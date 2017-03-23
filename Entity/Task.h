@@ -11,16 +11,21 @@ using namespace std;
 
 class Task
 {
-    string state;
+private:
+    short id;
     string name;
+    string state;
+    short counter; //to check status upgrading
 public:
-    Task(): state(""), name(""){}
+    Task(): state(""), name(""), counter(0){}
 
     Task(string name, string state)
     {
         this->name = name;
         this->state = state;
     }
+
+    short get_id();
 
     void set_state(string state);
 
@@ -29,6 +34,10 @@ public:
     void set_name(string name);
 
     string get_name();
+
+    void set_counter(short temp);
+
+    short get_counter();
 
     friend istream& operator >> (istream& is, Task& task);
 

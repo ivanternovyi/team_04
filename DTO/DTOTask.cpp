@@ -40,33 +40,50 @@ void DTOTask::write_to_file(Task obj){
     file.close();
 }
 
-void DTOTask::delete_task(string given_name)
+void DTOTask::delete_task(short id)
 {
     ifstream file("../data/Task.txt");
     ofstream out("../data/outfile.txt", ios::app);
-    string line, name;
+    string line;
     int k = 0;
     while(getline(file, line))
     {
-        int pos = line.find(',');
-        while(k < pos)
-        {
-            name += line[k];
-            k++;
-        }
-        if(given_name == name)
-        {
-            continue;
-        }
-        else
+        if(k != id)
         {
             out << line << "\n";
         }
-        name.clear();
-        k = 0;
+        k++;
     }
     file.close();
     out.close();
     remove("../data/Task.txt");
     rename("../data/outfile.txt","../data/Task.txt");
+}
+
+void DTOTask::update_task(short id)
+{
+    vector<Task>  tasks;
+    tasks = write_from_file();
+    Task t = tasks[id];
+    if(t.get_counter() < 3 && t.get_counter() != -1)
+    {
+        delete_task(id);
+        if(t.get_counter() + 1 == 1)
+        {
+            t.set_state("in_progress");
+        }
+        else if(t.get_counter() + 1 == 2)
+        {
+            t.set_state("varificate");
+        }
+        else if(t.get_counter()  + 1 == 3)
+        {
+            t.set_state("done!");
+        }
+        write_to_file(t);
+    }
+    else
+    {
+        cout << "It`s impossible to update current task!\n";
+    }
 }
