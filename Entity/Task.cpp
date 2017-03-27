@@ -100,4 +100,5 @@ ostream& operator << (ostream& os, Task& task)
     os << ",";
     os << task.get_state ();
     os <<"\n";
+    return os;
 }

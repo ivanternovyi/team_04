@@ -8,7 +8,7 @@ using namespace std;
 
 int first_menu()
 {
-    int choose;
+    string choose;
     cout << "***************************" << endl;
     cout << "1) Show all tasks" << endl;
     cout << "2) New task" << endl;
@@ -18,7 +18,20 @@ int first_menu()
     cout << "***************************" << endl;
     cout << "Enter your choice: ";
     cin >> choose;
-    return choose;
+    while(true)
+    {
+        if(choose == "1" || choose == "2" || choose == "3" || choose == "4" || choose == "5")
+        {
+            break;
+        }
+        else
+        {
+            cout << "Retry! Choice should be in range (1..5)!\n";
+            choose.clear();
+            cin >> choose;
+        }
+    }
+    return stoi(choose);
 }
 
 void menu (DTOTask &d, Task &t)
@@ -30,8 +43,7 @@ void menu (DTOTask &d, Task &t)
             case 1:
             {
                 show_all_task();
-                system("pause>null");
-                //system("cls");
+                system("clear");
                 break;
             }
 
@@ -39,26 +51,26 @@ void menu (DTOTask &d, Task &t)
             case 2:
             {
                 add_new_task(t, d);
-                system("cls");
+                system("clear");
                 break;
             }
 
             case 3:
             {
                 update();
-                system("cls");
+                system("clear");
                 break;
             }
             case 4:
             {
+                system("clear");
                 erase_task();
                 cin.get();
-                system("cls");
                 break;
             }
             default:
             {
-                system("cls");
+                cout << "Exit success!\n";
                 break;
             }
         }
@@ -91,18 +103,60 @@ void show_all_task()
 
 void erase_task()
 {
-    short id;
+    DTOTask d;
+    vector<Task>  tasks;
+    tasks = d.write_from_file();
+    string id;
     cout << "Input id of the task, which you want to delete: ";
     cin >> id;
-    DTOTask d;
-    d.delete_task(id);
+    int counter = 0;
+    while(true)
+    {
+        for(int i = 0; i < tasks.size(); i++)
+        {
+            if(id == to_string(i))
+            {
+                d.delete_task(stoi(id));
+                counter++;
+                break;
+            }
+        }
+        if(counter != 0)
+        {
+            break;
+        }
+        cout << "Retry! Id should be <= number of lines in file!\n";
+        id.clear();
+        cin >> id;
+    }
 }
 
 void update()
 {
-    short id;
+    DTOTask d;
+    vector<Task>  tasks;
+    tasks = d.write_from_file();
+    string id;
     cout << "Input id of the task, which you want to update: ";
     cin >> id;
-    DTOTask d;
-    d.update_task(id);
+    int counter = 0;
+    while(true)
+    {
+        for(int i = 0; i < tasks.size(); i++)
+        {
+            if(id == to_string(i))
+            {
+                d.update_task(stoi(id));
+                counter++;
+                break;
+            }
+        }
+        if(counter != 0)
+        {
+            break;
+        }
+        cout << "Retry! Id should be <= number of lines in file!\n";
+        id.clear();
+        cin >> id;
+    }
 }
