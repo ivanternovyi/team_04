@@ -1,19 +1,13 @@
-Name_temp,State_tempp
-navchalna,345yhlo
-llol,dtest
-kalol1, ll
-lol3, lok
-alol1, llka
-lol2, lokal
-ol5, lola
-lol1, loka
-lol2, llka
-ttt,to_do
-vov,done!
-d,d
-gg,done!
-ll,done!
-hh,done!
-task,varificate
-task,done!
-tassfg,done!
+biology,in_progress
+chemistry,to_do
+astronomy,varificate
+sports,done!
+algebra,to_do
+discrete,done!
+physics,done!
+music,varificate
+geography,done!
+geology,done!
+drawing,varificate
+ecology,varificate
+geometry,in_progress

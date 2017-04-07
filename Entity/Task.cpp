@@ -67,30 +67,20 @@ short Task::get_counter()
     return this->counter;
 }
 
-//overload operator to parse line into task
+//parse method
+void Task::parse_line(string line)
+{
+    size_t found1 = line.find(",");
+    this->name = line.substr(0, found1);
+    this->state = line.substr(found1+1);
+}
+
+//overload operator to read line to task
 istream& operator >> (istream& is, Task &task)
 {
-    //temporary variable strTask to read from stream is
-    string strTask;
-    getline(is, strTask);
-    string name;
-    string state;
-    int pos = strTask.find(',');
-    int iterator = 0;
-    while (iterator < strTask.size())   //parsing line into task
-    {
-        if (iterator < pos)
-        {
-            name += strTask[iterator];
-        }
-        else if(iterator > pos)
-        {
-            state += strTask[iterator];
-        }
-        iterator += 1;
-    }
-    task.set_name(name);
-    task.set_state(state);
+    string line;
+    getline(is, line);
+    task.parse_line(line);
     return is;
 }
 

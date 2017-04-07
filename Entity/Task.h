@@ -39,6 +39,8 @@ public:
 
     short get_counter();
 
+    void parse_line(string line);
+
     friend istream& operator >> (istream& is, Task& task);
 
     friend ostream& operator << (ostream& os, Task& task);
