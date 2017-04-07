@@ -27,11 +27,3 @@
 *.exe
 *.out
 *.app
-
-# Makefiles
-/idea*
-/cmake-build-debug*
-CMake*
-cmake*
-
-
