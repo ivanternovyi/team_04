@@ -3,6 +3,12 @@
 #include "../DTO/DTOTask.h"
 #include "Menu.h"
 
+#if (_WIN32 || _WIN64)
+    const char* CLR = "cls";
+#elif (__unix || __unix__ || __APPLE__ || __MACH__ || __linux__)
+    const char* CLR = "clear";
+#endif
+
 
 using namespace std;
 
@@ -43,7 +49,7 @@ void menu (DTOTask &d, Task &t)
             case 1:
             {
                 show_all_task();
-                system("clear");
+                system(CLR);
                 break;
             }
 
@@ -51,19 +57,19 @@ void menu (DTOTask &d, Task &t)
             case 2:
             {
                 add_new_task(t, d);
-                system("clear");
+                system(CLR);
                 break;
             }
 
             case 3:
             {
                 update();
-                system("clear");
+                system(CLR);
                 break;
             }
             case 4:
             {
-                system("clear");
+                system(CLR);
                 erase_task();
                 cin.get();
                 break;
