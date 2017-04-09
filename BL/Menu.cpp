@@ -87,9 +87,11 @@ void add_new_task(Task& t, DTOTask& d)
 {
     string state;
     string name;
-    cout << "Enter name: " << endl;
+    string description;
+    cout << "Enter name: ";
     cin >> name;
-    cout << "Enter state('to_do', 'in_progress', 'varificate', 'done!'): " << endl;
+    cin.get();
+    cout << "Enter state('to_do', 'in_progress', 'varificate', 'done!'): ";
     while(true)
     {
         getline(cin, state);
@@ -102,19 +104,22 @@ void add_new_task(Task& t, DTOTask& d)
             cout << "Retry!\n";
         }
     }
+    cout << "Enter description: ";
+    getline(cin, description);
     t.set_name(name);
     t.set_state(state);
+    t.set_description(description);
     d.write_to_file(t);
-
 }
 
 void show_all_task()
 {
     vector<Task> tasks(DTOTask::write_from_file());
-    cout << "Name: " << "\t" << "State: " << endl;
+    cout << "Id: " << "\tName: " << "\t\t\t\t\tState: " << "\t\t\t\t\t\tDescription:\n";
     for(int i = 0 ; i < tasks.size() - 1; i++)
     {
-        cout << "Id: " << i << "\t"<< tasks[i].get_name() << "\t" << tasks[i].get_state() << endl;
+        cout << i << "\t\t"<< tasks[i].get_name() << "\t\t\t\t\t" << tasks[i].get_state() <<
+             "\t\t\t\t\t\t" << tasks[i].get_description() << endl;
     }
 }
 

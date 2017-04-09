@@ -1,13 +1,14 @@
-biology,in_progress
-chemistry,to_do
-astronomy,varificate
-sports,done!
-algebra,to_do
-discrete,done!
-physics,done!
-music,varificate
-geography,done!
-geology,done!
-drawing,varificate
-ecology,varificate
-geometry,in_progress
+biology,in_progress,des
+astronomy,varificate,des
+sports,done!,des
+algebra,to_do,des
+discrete,done!,des
+physics,done!,des
+music,varificate,des
+geography,done!,des
+geology,done!,des
+drawing,varificate,des
+ecology,varificate,des
+geometry,in_progress,des
+chemistry,in_progress,des
+navchalna,in_progress,description to the task
