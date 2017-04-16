@@ -16,16 +16,23 @@ private:
     string name;
     string state;
     string description;
+    short assignment;
     short counter; //to check status upgrading
 public:
-    Task(): state(""), name(""), counter(0), description(""){}
+    Task(): state(""), name(""), counter(0), description(""), assignment(0){}
 
-    Task(string name, string state, string des)
+    Task(string name, string state, string des, short as)
     {
         this->name = name;
         this->state = state;
-        this->description =des;
+        this->description = des;
+        this->assignment = as;
+
     }
+
+    void set_assignment(short val);
+
+    short get_assignment();
 
     void set_description(string temp);
 

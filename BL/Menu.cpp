@@ -2,6 +2,7 @@
 #include "../Entity/Task.h"
 #include "../DTO/DTOTask.h"
 #include "Menu.h"
+#include <sstream>
 
 #if (_WIN32 || _WIN64)
     const char* CLR = "cls";
@@ -40,7 +41,7 @@ int first_menu()
     return stoi(choose);
 }
 
-void menu (DTOTask &d, Task &t)
+void menu(DTOTask &dto, Task &task)
 {
     int your_choice = 0;
     while(your_choice != 5){
@@ -53,10 +54,9 @@ void menu (DTOTask &d, Task &t)
                 break;
             }
 
-
             case 2:
             {
-                add_new_task(t, d);
+                add_new_task(task, dto);
                 system(CLR);
                 break;
             }
@@ -83,20 +83,34 @@ void menu (DTOTask &d, Task &t)
     }
 }
 
-void add_new_task(Task& t, DTOTask& d)
+void add_new_task(Task& task, DTOTask& dto)
 {
+    enum state_task {to_do = 1, in_progress, varificate, done};
     string state;
     string name;
     string description;
+    string assignment;
     cout << "Enter name: ";
     cin >> name;
+    task.set_name(name);
     cin.get();
-    cout << "Enter state('to_do', 'in_progress', 'varificate', 'done!'): ";
+    cout << "Enter state(1 - 'to_do', 2 - 'in_progress', 3 - 'varificate', 4 - 'done!'): ";
     while(true)
     {
         getline(cin, state);
-        if(state == "to_do" || state == "in_progress" || state == "varificate" || state == "done!")
+        if(state == "1" || state == "2" || state == "3" || state == "4")
         {
+            switch(stoi(state))
+            {
+                case to_do: task.set_state("to_do");
+                    break;
+                case in_progress: task.set_state("in_progress");
+                    break;
+                case varificate: task.set_state("varificate");
+                    break;
+                case done: task.set_state("done!");
+                    break;
+            }
             break;
         }
         else
@@ -106,20 +120,36 @@ void add_new_task(Task& t, DTOTask& d)
     }
     cout << "Enter description: ";
     getline(cin, description);
-    t.set_name(name);
-    t.set_state(state);
-    t.set_description(description);
-    d.write_to_file(t);
+    task.set_description(description);
+    cout << "Input assignment: ";
+    while(true)
+    {
+        locale loc;
+        cin >> assignment;
+        if (isdigit(assignment[0], loc))
+        {
+            short assign_temp;
+            stringstream(assignment) >> assign_temp;
+            task.set_assignment(assign_temp);
+            break;
+        }
+        else
+        {
+            cout << "Retry! Assignment should be a digit!\n";
+
+        }
+    }
+    dto.write_to_file(task);
 }
 
 void show_all_task()
 {
     vector<Task> tasks(DTOTask::write_from_file());
-    cout << "Id: " << "\tName: " << "\t\t\t\t\tState: " << "\t\t\t\t\t\tDescription:\n";
+    cout << "Id: " << "\tName: " << "\t\t\t\t\tState: " << "\t\t\t\t\t\tDescription:" << "\t\tAssignment:\n";
     for(int i = 0 ; i < tasks.size() - 1; i++)
     {
         cout << i << "\t\t"<< tasks[i].get_name() << "\t\t\t\t\t" << tasks[i].get_state() <<
-             "\t\t\t\t\t\t" << tasks[i].get_description() << endl;
+             "\t\t\t\t\t\t" << tasks[i].get_description() << "\t\t\t\t\t\t" << tasks[i].get_assignment()<< endl;
     }
 }
 

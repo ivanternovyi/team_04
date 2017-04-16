@@ -1,6 +1,7 @@
 #include "Task.h"
 #include "../DTO/DTOTask.h"
 
+
 short Task::get_id()
 {
     DTOTask d;
@@ -15,6 +16,16 @@ short Task::get_id()
         }
     }
     return this->id;
+}
+
+void Task::set_assignment(short val)
+{
+    this->assignment = val;
+}
+
+short Task::get_assignment()
+{
+    return this->assignment;
 }
 
 void Task::set_description(string temp)
@@ -79,11 +90,13 @@ void Task::parse_line(string line)
     this->name = line.substr(0, found1);
     size_t found2 = line.find(",", found1 + 1, 1);
     this->state = line.substr(found1+1, found2 - found1 - 1);
-    this->description = line.substr(found2 + 1);
+    found1 = line.find(",", found2 + 1, 1);
+    this->description = line.substr(found2 + 1, found1 - found2 - 1);
+    this->assignment = atoi(line.substr(found1 + 1).c_str());
 }
 
 //overload operator to read line to task
-istream& operator >> (istream& is, Task &task)
+istream& operator >> (istream& is, Task& task)
 {
     string line;
     getline(is, line);
@@ -93,11 +106,13 @@ istream& operator >> (istream& is, Task &task)
 
 ostream& operator << (ostream& os, Task& task)
 {
-    os << task.get_name ();
+    os << task.get_name();
     os << ",";
-    os << task.get_state ();
+    os << task.get_state();
     os << ",";
     os << task.get_description();
+    os << ",";
+    os << task.get_assignment();
     os <<"\n";
     return os;
 }
