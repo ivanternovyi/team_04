@@ -142,14 +142,13 @@ void add_new_task(Task& task, DTOTask& dto)
     dto.write_to_file(task);
 }
 
-void show_all_task()
-{
+void show_all_task() {
     vector<Task> tasks(DTOTask::write_from_file());
-    cout << "Id: " << "\tName: " << "\t\t\t\t\tState: " << "\t\t\t\t\t\tDescription:" << "\t\tAssignment:\n";
-    for(int i = 0 ; i < tasks.size() - 1; i++)
-    {
-        cout << i << "\t\t"<< tasks[i].get_name() << "\t\t\t\t\t" << tasks[i].get_state() <<
-             "\t\t\t\t\t\t" << tasks[i].get_description() << "\t\t\t\t\t\t" << tasks[i].get_assignment()<< endl;
+    printf("%-5s%-20s%-20s%-20s%-15s\n", "Id", "Name", "State", "Description", "Assignment");
+    for (int i = 0; i < tasks.size() - 1; i++) {
+        printf("%-5i%-20s%-20s%-20s%-15i\n", i, tasks[i].get_name().c_str(),
+               tasks[i].get_state().c_str(), tasks[i].get_description().c_str(),
+        tasks[i].get_assignment());
     }
 }
 
