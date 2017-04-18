@@ -8,7 +8,9 @@ void menu(DTOTask& d, Task& t);
 
 void show_menu();
 
-void show_by_state(string temp);
+void assignment_menu();
+
+void show_by(string state, int assign);
 
 void add_new_task(Task& t, DTOTask& d);
 

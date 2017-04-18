@@ -15,6 +15,7 @@ using namespace std;
 
 enum state_task {to_do = 1, in_progress, varificate, done};
 
+
 int first_menu()
 {
     string choice;
@@ -95,6 +96,7 @@ void show_menu()
     cout << "3) Varificate tasks" << endl;
     cout << "4) Done tasks" << endl;
     cout << "5) All tasks" << endl;
+    cout << "6) Show by assignment" << endl;
     cout << "q - to return to main menu" << endl;
     cout << "***************************" << endl;
     cout << "Enter your choice: ";
@@ -105,39 +107,68 @@ void show_menu()
         {
             return;
         }
-        if(choice == "1" || choice == "2" || choice == "3" || choice == "4" || choice == "5")
+        else if(choice == "1" || choice == "2" || choice == "3" || choice == "4" || choice == "5" || choice == "6")
         {
             switch (stoi(choice))
             {
-                case to_do: show_by_state("to_do");
+                case to_do: show_by("to_do", -1);
                     break;
-                case in_progress: show_by_state("in_progress");
+                case in_progress: show_by("in_progress", -1);
                     break;
-                case varificate: show_by_state("varificate");
+                case varificate: show_by("varificate", -1);
                     break;
-                case done: show_by_state("done!");
+                case done: show_by("done!", -1);
                     break;
-                case 5: show_by_state("all");
+                case 5: show_by("all", -1);
+                    break;
+                case 6: assignment_menu();
                     break;
             }
             break;
         }
         else
         {
-            cout << "Retry! Choice should be in range (1..5)!\n";
+            cout << "Retry! Choice should be in range (1..6)!\n";
             choice.clear();
             cin >> choice;
         }
     }
 }
 
-void show_by_state(string state)
+void assignment_menu()
+{
+    vector<Task> tasks(DTOTask::write_from_file());
+    string assignment;
+    short assign_temp;
+    cout << "Input assignment of the task, which should be shown: ";
+    while(true)
+    {
+        locale loc;
+        cin >> assignment;
+        if (isdigit(assignment[0], loc))
+        {
+            stringstream(assignment) >> assign_temp;
+            break;
+        }
+        else
+        {
+            cout << "Retry! Assignment should be a digit greater than zero or equal!\n";
+        }
+    }
+    show_by("all", assign_temp);
+}
+
+//show by state and assignment: if state = "all" and assign = -1, all tasks will be shown
+void show_by(string state, int assign)
 {
     vector<Task> tasks(DTOTask::write_from_file());
     printf("%-5s%-20s%-20s%-20s%-15s\n", "Id", "Name", "State", "Description", "Assignment");
     int counter = 0;
     for (int i = 0; i < tasks.size() - 1; i++) {
-        if(tasks[i].get_state() == state || state == "all")
+        if((tasks[i].get_state() == state && tasks[i].get_assignment() == assign)
+            || (state == "all" && tasks[i].get_assignment() == assign)
+                || (assign == -1 && tasks[i].get_state() == state)
+                    || (assign == -1 && state == "all"))
         {
             counter++;
             printf("%-5i%-20s%-20s%-20s%-15i\n", i, tasks[i].get_name().c_str(),
@@ -146,7 +177,7 @@ void show_by_state(string state)
         }
         else if(i == tasks.size() - 2 && counter == 0)
         {
-            cout << "\t\t\tThere are no any tasks with given state...\n";
+            cout << "\t\t\tThere are no any tasks with given state or assignment...\n";
         }
     }
 }
@@ -202,8 +233,7 @@ void add_new_task(Task& task, DTOTask& dto)
         }
         else
         {
-            cout << "Retry! Assignment should be a digit!\n";
-
+            cout << "Retry! Assignment should be a digit greater than zero or equal!\n";
         }
     }
     dto.write_to_file(task);
@@ -220,7 +250,7 @@ void update()
     int counter = 0;
     while(true)
     {
-        for(int i = 0; i < tasks.size(); i++)
+        for(int i = 0; i < tasks.size() - 1; i++)
         {
             if(id == to_string(i))
             {
