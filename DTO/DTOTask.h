@@ -12,7 +12,7 @@ class DTOTask{
 public:
     //reading data from file
     static vector<Task> write_from_file();
-    //write task to file ../data/Task.txt
+    //write task to file ../data/Task.csv
     void write_to_file(Task obj);;
     //deleting task in file by given name
     void delete_task(short id);
