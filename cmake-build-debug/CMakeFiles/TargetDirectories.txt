@@ -1,3 +1,0 @@
-/home/ivan/Desktop/univer/team_04/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ivan/Desktop/univer/team_04/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/ivan/Desktop/univer/team_04/cmake-build-debug/CMakeFiles/manager_tasks.dir

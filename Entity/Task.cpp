@@ -1,13 +1,14 @@
 #include "Task.h"
 #include "../DTO/DTOTask.h"
 
+
 short Task::get_id()
 {
     DTOTask d;
     vector<Task>  tasks;
     tasks = d.write_from_file();
     this->id = tasks.size();
-    for(int i = 0; i < tasks.size(); i++)
+    for(int i = 0; i < tasks.size() - 1; i++)
     {
         if(this->name == tasks[i].get_name())
         {
@@ -15,6 +16,26 @@ short Task::get_id()
         }
     }
     return this->id;
+}
+
+void Task::set_assignment(short val)
+{
+    this->assignment = val;
+}
+
+short Task::get_assignment()
+{
+    return this->assignment;
+}
+
+void Task::set_description(string temp)
+{
+    this->description = temp;
+}
+
+string Task::get_description()
+{
+    return this->description;
 }
 
 void Task::set_state(string state)
@@ -35,11 +56,6 @@ void Task::set_name(string name)
 string Task::get_name()
 {
     return this->name;
-}
-
-void Task::set_counter(short temp)
-{
-    this->counter = temp;
 }
 
 short Task::get_counter()
@@ -67,37 +83,36 @@ short Task::get_counter()
     return this->counter;
 }
 
-//overload operator to parse line into task
-istream& operator >> (istream& is, Task &task)
+//parse method
+void Task::parse_line(string line)
 {
-    //temporary variable strTask to read from stream is
-    string strTask;
-    getline(is, strTask);
-    string name;
-    string state;
-    int pos = strTask.find(',');
-    int iterator = 0;
-    while (iterator < strTask.size())   //parsing line into task
-    {
-        if (iterator < pos)
-        {
-            name += strTask[iterator];
-        }
-        else if(iterator > pos)
-        {
-            state += strTask[iterator];
-        }
-        iterator += 1;
-    }
-    task.set_name(name);
-    task.set_state(state);
+    size_t found1 = line.find(",");
+    this->name = line.substr(0, found1);
+    size_t found2 = line.find(",", found1 + 1, 1);
+    this->state = line.substr(found1+1, found2 - found1 - 1);
+    found1 = line.find(",", found2 + 1, 1);
+    this->description = line.substr(found2 + 1, found1 - found2 - 1);
+    this->assignment = atoi(line.substr(found1 + 1).c_str());
+}
+
+//overload operator to read line to task
+istream& operator >> (istream& is, Task& task)
+{
+    string line;
+    getline(is, line);
+    task.parse_line(line);
     return is;
 }
 
 ostream& operator << (ostream& os, Task& task)
 {
-    os << task.get_name ();
+    os << task.get_name();
     os << ",";
-    os << task.get_state ();
+    os << task.get_state();
+    os << ",";
+    os << task.get_description();
+    os << ",";
+    os << task.get_assignment();
     os <<"\n";
+    return os;
 }

@@ -1,13 +1,11 @@
 #include "DTOTask.h"
-#include <string>
-#include <cstdio>
 
 
 using namespace std;
 
 vector<Task> DTOTask::write_from_file()
 {
-    ifstream file("../data/Task.txt");
+    ifstream file("../data/Task.csv");
     vector<Task> tasks;
     if (file.is_open())
     {
@@ -28,7 +26,7 @@ vector<Task> DTOTask::write_from_file()
 }
 
 void DTOTask::write_to_file(Task obj){
-    ofstream file("../data/Task.txt", ios::app);
+    ofstream file("../data/Task.csv", ios::app);
     if (file)
     {
         file << obj;
@@ -42,8 +40,8 @@ void DTOTask::write_to_file(Task obj){
 
 void DTOTask::delete_task(short id)
 {
-    ifstream file("../data/Task.txt");
-    ofstream out("../data/outfile.txt", ios::app);
+    ifstream file("../data/Task.csv");
+    ofstream out("../data/outfile.csv", ios::app);
     string line;
     int k = 0;
     while(getline(file, line))
@@ -56,8 +54,8 @@ void DTOTask::delete_task(short id)
     }
     file.close();
     out.close();
-    remove("../data/Task.txt");
-    rename("../data/outfile.txt","../data/Task.txt");
+    remove("../data/Task.csv");
+    rename("../data/outfile.csv","../data/Task.csv");
 }
 
 void DTOTask::update_task(short id)

@@ -15,15 +15,28 @@ private:
     short id;
     string name;
     string state;
+    string description;
+    short assignment;
     short counter; //to check status upgrading
 public:
-    Task(): state(""), name(""), counter(0){}
+    Task(): state(""), name(""), counter(0), description(""), assignment(0){}
 
-    Task(string name, string state)
+    Task(string name, string state, string des, short as)
     {
         this->name = name;
         this->state = state;
+        this->description = des;
+        this->assignment = as;
+
     }
+
+    void set_assignment(short val);
+
+    short get_assignment();
+
+    void set_description(string temp);
+
+    string get_description();
 
     short get_id();
 
@@ -35,9 +48,9 @@ public:
 
     string get_name();
 
-    void set_counter(short temp);
-
     short get_counter();
+
+    void parse_line(string line);
 
     friend istream& operator >> (istream& is, Task& task);
 

@@ -6,11 +6,14 @@ int first_menu();
 
 void menu(DTOTask& d, Task& t);
 
-void add_new_task(Task& t, DTOTask& d);
+void show_menu();
 
-void show_all_task();
+void assignment_menu();
+
+void show_by(string state, int assign);
+
+void add_new_task(Task& t, DTOTask& d);
 
 void erase_task();
 
 void update();
-

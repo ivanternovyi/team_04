@@ -3,6 +3,8 @@
 #include "BL/Menu.h"
 
 
+using namespace std;
+
 int main()
 {
     DTOTask d;
