@@ -1,23 +1,23 @@
 #ifndef MANAGER_TASKS_BASE_H
 #define MANAGER_TASKS_BASE_H
 
-#include <iostream>
-
-
-using namespace std;
 
 class Base
 {
 protected:
     short id;
+    Base() : id(readId()){};
+private:
+    //to increment id
+    void renewId(short oldId);
+    //returns id from a file
+    short readId();
 public:
-    Base():id(0){};
-
     short getBaseId();
 
-    virtual ~Base() = 0;
+    virtual ~Base();
 };
 
 
+#endif
 
-#endif //MANAGER_TASKS_BASE_H
