@@ -5,6 +5,7 @@ DTODate::DTODate() {};
 
 istream& operator>>(istream& is, DTODate&d)
 {
+	check:
 	cout << "Enter date (format - dd mm yyyy hh mm ss - spaces in between)\n";
 	char** arr = new char*[6];
 	for (int i = 0; i < 6; i++)
@@ -84,7 +85,7 @@ istream& operator>>(istream& is, DTODate&d)
 		break;
 	case 2:
 		switch (b)
-		{
+		{	
 		case 1:
 			if (d.date.get_day() <= 29)
 			{
@@ -108,7 +109,8 @@ istream& operator>>(istream& is, DTODate&d)
 	}
 	if (check == 0)
 	{
-		cout << "Date format is incorrect\n";
+		cout << "\nDate format is incorrect, please retry!\n";
+		goto check;
 	}
 	return is;
 }
@@ -135,11 +137,11 @@ ostream&  operator<<(ostream& os, DTODate&d)
 	os << "." << d.date.get_year() << " " << d.date.get_hour() << ":";
 	if (d.date.get_minute() < 10)
 	{
-		os << "0" << d.date.get_minute();
+		os << "0" << d.date.get_minute() << ":";
 	}
 	else
 	{
-		os <<  d.date.get_minute();
+		os <<  d.date.get_minute() << ":";
 	}
 	if (d.date.get_second() < 10)
 	{
@@ -159,6 +161,7 @@ void DTODate::format(char** string_date)
 	this->date.set_year(atoi(string_date[2]));
 	this->date.set_hour(atoi(string_date[3]));
 	this->date.set_minute(atoi(string_date[4]));
+	this->date.set_second(atoi(string_date[5]));
 }
 
 bool operator<(Date left, Date right)
@@ -214,12 +217,7 @@ bool operator==(Date left, Date right)
 
 bool operator!=(Date left, Date right)
 {
-	if ((left.get_day() != right.get_day()) ||
-		(left.get_hour() != right.get_hour()) ||
-		(left.get_minute() != right.get_minute()) ||
-		(left.get_month() != right.get_month()) ||
-		(left.get_year() != right.get_year()) ||
-		(left.get_second() != right.get_second()))
+	if (!(left == right))
 	{
 		return true;
 	}
