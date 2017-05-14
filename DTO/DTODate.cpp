@@ -172,92 +172,32 @@ bool operator<(Date left, Date right)
 	{
 		return true;
 	}
-	if (left.get_year() == right.get_year())
-	{
-		if (left.get_month() < right.get_month())
-		{
-			return true;
-		}
-		if (left.get_month() == right.get_month())
-		{
-			if (left.get_day() < right.get_day())
-			{
-				return true;
-			}
-			if (left.get_day() == right.get_day())
-			{
-				if (left.get_hour() < right.get_hour())
-				{
-					return true;
-				}
-				if (left.get_hour() == right.get_hour())
-				{
-					if (left.get_minute() < right.get_minute())
-					{
-						return true;
-					}
-					if (left.get_minute() == right.get_minute())
-					{
-						if (left.get_second() < right.get_second())
-						{
-							return true;
-						}
-					}
-				}
-			}
-		}
-	}
-	else
-	{
-		return false;
-	}
-};
-bool operator>(Date left, Date right)
-{
-	if (left.get_year() > right.get_year())
+	if (left.get_month() < right.get_month())
 	{
 		return true;
 	}
-	if (left.get_year() == right.get_year())
+	if (left.get_day() < right.get_day())
 	{
-		if (left.get_month() > right.get_month())
-		{
-			return true;
-		}
-		if (left.get_month() == right.get_month())
-		{
-			if (left.get_day() > right.get_day())
-			{
-				return true;
-			}
-			if (left.get_day() == right.get_day())
-			{
-				if (left.get_hour() > right.get_hour())
-				{
-					return true;
-				}
-				if (left.get_hour() == right.get_hour())
-				{
-					if (left.get_minute() > right.get_minute())
-					{
-						return true;
-					}
+		return true;
+	}
+	if (left.get_hour() < right.get_hour())
+	{
+		return true;
+	}
+	if (left.get_minute() < right.get_minute())
+	{
+		return true;
+	}
+	if (left.get_second() < right.get_second())
+	{
+		return true;
+	}
+	return false;
+};
+bool operator>(Date left, Date right)
+{
+	return !(left < right);
 
-					if (left.get_minute() == right.get_minute())
-					{
-						if (left.get_second() > right.get_second())
-						{
-							return true;
-						}
-					}
-				}
-			}
-		}
-	}
-	else
-	{
-		return false;
-	}
 };
 bool operator==(Date left, Date right)
 {
