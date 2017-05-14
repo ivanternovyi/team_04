@@ -1,4 +1,6 @@
 #include"DTODate.h"
+
+
 DTODate::DTODate() {};
 
 istream& operator>>(istream& is, DTODate&d)
@@ -16,7 +18,6 @@ istream& operator>>(istream& is, DTODate&d)
 			arr[i] = new char[2];
 		}
 	}
-		
 	for (int i = 0; i < 6; i++)
 	{
 		if (i == 2)
@@ -37,9 +38,6 @@ istream& operator>>(istream& is, DTODate&d)
 		
 	}
 	d.format(arr);
-
-
-
 	//      Check if entered date is correct
 	bool check=false, b;
 	if (d.date.get_year() % 4 == 0)
@@ -60,7 +58,7 @@ istream& operator>>(istream& is, DTODate&d)
 	else
 	{
 		b = 0;
-	};
+	}
 	switch (d.date.get_month())
 	{
 	case 1:
@@ -74,9 +72,7 @@ istream& operator>>(istream& is, DTODate&d)
 		{
 			check = true;
 		}
-
 		break;
-
 	case 4:
 	case 6:
 	case 9:
@@ -101,7 +97,6 @@ istream& operator>>(istream& is, DTODate&d)
 				check = true;
 			}
 			break;
-
 		}
 		break;
 	default: check = false;
@@ -115,9 +110,9 @@ istream& operator>>(istream& is, DTODate&d)
 	{
 		cout << "Date format is incorrect\n";
 	}
-
 	return is;
-};
+}
+
 ostream&  operator<<(ostream& os, DTODate&d)
 {
 	if (d.date.get_day() < 10)
@@ -155,7 +150,8 @@ ostream&  operator<<(ostream& os, DTODate&d)
 		os << d.date.get_second();
 	}
 	return os;
-};
+}
+
 void DTODate::format(char** string_date)
 {
 	this->date.set_day(atoi(string_date[0]));
@@ -163,8 +159,7 @@ void DTODate::format(char** string_date)
 	this->date.set_year(atoi(string_date[2]));
 	this->date.set_hour(atoi(string_date[3]));
 	this->date.set_minute(atoi(string_date[4]));
-};
-
+}
 
 bool operator<(Date left, Date right)
 {
@@ -193,12 +188,13 @@ bool operator<(Date left, Date right)
 		return true;
 	}
 	return false;
-};
+}
+
 bool operator>(Date left, Date right)
 {
 	return !(left < right);
+}
 
-};
 bool operator==(Date left, Date right)
 {
 	if ((left.get_day() == right.get_day()) &&
@@ -214,10 +210,10 @@ bool operator==(Date left, Date right)
 	{
 		return false;
 	}
-};
+}
+
 bool operator!=(Date left, Date right)
 {
-	
 	if ((left.get_day() != right.get_day()) ||
 		(left.get_hour() != right.get_hour()) ||
 		(left.get_minute() != right.get_minute()) ||
@@ -231,6 +227,4 @@ bool operator!=(Date left, Date right)
 	{
 		return false;
 	}
-
-};
-
+}

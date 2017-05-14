@@ -1,6 +1,6 @@
 #pragma once
-#include"../Entity/Task.h"
-#include"../DTO/DTOTask.h"
+#include "../Entity/Task.h"
+#include "../DTO/DTOTask.h"
 
 int first_menu();
 

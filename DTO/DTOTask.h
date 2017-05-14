@@ -8,7 +8,8 @@
 
 using namespace std;
 
-class DTOTask{
+class DTOTask
+{
 public:
     //reading data from file
     static vector<Task> write_from_file();

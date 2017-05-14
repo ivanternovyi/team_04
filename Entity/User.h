@@ -1,7 +1,3 @@
-//
-// Created by nazar on 03.05.17.
-//
-
 #ifndef TEAM_04_USER_H
 #define TEAM_04_USER_H
 
@@ -12,18 +8,15 @@
 #include <string>
 #include "Base.h"
 
+
 using namespace std;
 
-class User : public Base {
-
+class User : public Base
+{
 private:
-
     string username;
-
     string login;
-
     string password;
-
 public:
     User();
 
@@ -44,6 +37,4 @@ public:
     void set_password(string groupname);
 };
 
-
-
-#endif //TEAM_04_USER_H
+#endif

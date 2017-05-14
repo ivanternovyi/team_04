@@ -27,7 +27,6 @@ public:
         this->state = state;
         this->description = des;
         this->assignment = as;
-
     }
 
     void set_assignment(short val);
