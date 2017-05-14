@@ -29,9 +29,10 @@
 *.app
 
 # Makefiles
+idea*
 /idea*
 /cmake-build-debug*
 CMake*
 cmake*
-
-
+*.xml
+*.iml
