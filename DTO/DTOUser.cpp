@@ -1,8 +1,10 @@
+//
+// Created by nazar on 09.05.17.
+//
+
 #include "DTOUser.h"
 
-
-vector<User> DTOUser::write_from_file()
-{
+vector<User> DTOUser::write_from_file() {
     ifstream file("../data/User.csv");
     vector<User> users;
     if (file.is_open())
@@ -23,8 +25,7 @@ vector<User> DTOUser::write_from_file()
     return users;
 }
 
-void DTOUser::write_to_file(User obj)
-{
+void DTOUser::write_to_file(User obj) {
     ofstream file("../data/User.csv", ios::app);
     if (file)
     {
@@ -36,9 +37,8 @@ void DTOUser::write_to_file(User obj)
     }
     file.close();
 }
-//should be redone
-void DTOUser::delete_user(short id)
-{
+
+void DTOUser::delete_user(short id) {
     ifstream file("../data/User.csv");
     ofstream out("../data/outfile.csv", ios::app);
     string line;
@@ -57,9 +57,20 @@ void DTOUser::delete_user(short id)
     rename("../data/outfile.csv","../data/User.csv");
 }
 
-void DTOUser::change_user_data(short id)
-{
+void DTOUser::change_user_data(short id) {
     vector<User> users;
     users = write_from_file();
     User t = users[id];
+}
+
+bool DTOUser::is_unique_user(string username) {
+    bool result = true;
+    vector<User> users;
+    users = write_from_file();
+    for (int i = 0; i < users.size() ; ++i) {
+        if(users[i].get_username() == username){
+            result = false;
+        }
+    }
+    return result;
 }

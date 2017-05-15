@@ -1,3 +1,7 @@
+//
+// Created by nazar on 03.05.17.
+//
+
 #ifndef TEAM_04_USER_H
 #define TEAM_04_USER_H
 
@@ -8,15 +12,18 @@
 #include <string>
 #include "Base.h"
 
-
 using namespace std;
 
-class User : public Base
-{
+class User : public Base{
+
 private:
+
     string username;
+
     string login;
+
     string password;
+
 public:
     User();
 
@@ -28,13 +35,21 @@ public:
 
     void set_username(string username);
 
-    string return_login();
+    string get_login();
 
     void set_login(string surname);
 
-    string return_password();
+    string get_password();
 
     void set_password(string groupname);
+
+    void parse_line(string line);
+
+    friend istream& operator >> (istream& is, User& user);
+
+    friend ostream& operator << (ostream& os, User& user);
 };
 
-#endif
+
+
+#endif //TEAM_04_USER_H
