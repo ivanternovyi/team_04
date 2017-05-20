@@ -7,7 +7,7 @@
 #if (_WIN32 || _WIN64)
     const char* CLR = "cls";
 #elif (__unix || __unix__ || __APPLE__ || __MACH__ || __linux__)
-    const char* CLR = "clear";
+    const char* CLR = "";
 #endif
 
 
@@ -176,7 +176,7 @@ void show_by(string state, int assign)
                    tasks[i].get_state().c_str(), tasks[i].get_description().c_str(),
                    tasks[i].get_create_date(), tasks[i].get_assignment());
         }
-        else if(i == tasks.size() - 2 && counter == 0)
+        else if(i == tasks.size() - 1 && counter == 0)
         {
             cout << "\t\t\tThere are no any tasks with given state or assignment...\n";
         }
