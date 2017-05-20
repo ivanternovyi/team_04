@@ -21,6 +21,16 @@ public:
 		minute(mi), 
 		second(s) {}
 
+	Date& operator = (const Date& obj)
+	{
+		this->day = obj.day;
+		this->month = obj.month;
+		this->year = obj.year;
+		this->hour = obj.hour;
+		this->minute = obj.minute;
+		this->second = obj.second;
+	}
+
 	unsigned short  get_day();
 
 	unsigned short  get_month();

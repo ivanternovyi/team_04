@@ -6,13 +6,14 @@ using namespace std;
 vector<Task> DTOTask::write_from_file()
 {
     ifstream file("../data/Task.csv");
+    string line;
     vector<Task> tasks;
     if (file.is_open())
     {
-        while (!file.eof())
+        while (getline(file,line))
         {
             Task task;
-            file >> task;
+            task.parse_line(line);
             tasks.push_back(task);
         }
         file.close();
@@ -20,7 +21,7 @@ vector<Task> DTOTask::write_from_file()
     }
     else
     {
-        cout << "File not found!" <<endl;
+        cout << "File not found!" << endl;
     }
     return tasks;
 }

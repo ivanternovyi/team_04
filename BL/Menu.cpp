@@ -162,18 +162,19 @@ void assignment_menu()
 void show_by(string state, int assign)
 {
     vector<Task> tasks(DTOTask::write_from_file());
-    printf("%-5s%-20s%-20s%-20s%-15s\n", "Id", "Name", "State", "Description", "Assignment");
+    printf("%-5s%-20s%-20s%-20s%-25s%-15s\n", "Id", "Name", "State", "Description", "Date of creation","Assignment");
     int counter = 0;
-    for (int i = 0; i < tasks.size() - 1; i++) {
+    for (int i = 0; i < tasks.size(); i++)
+    {
         if((tasks[i].get_state() == state && tasks[i].get_assignment() == assign)
             || (state == "all" && tasks[i].get_assignment() == assign)
                 || (assign == -1 && tasks[i].get_state() == state)
                     || (assign == -1 && state == "all"))
         {
             counter++;
-            printf("%-5i%-20s%-20s%-20s%-15i\n", i, tasks[i].get_name().c_str(),
+            printf("%-5i%-20s%-20s%-20s%-25s%-15i\n", i, tasks[i].get_name().c_str(),
                    tasks[i].get_state().c_str(), tasks[i].get_description().c_str(),
-                   tasks[i].get_assignment());
+                   tasks[i].get_create_date(), tasks[i].get_assignment());
         }
         else if(i == tasks.size() - 2 && counter == 0)
         {
@@ -184,6 +185,7 @@ void show_by(string state, int assign)
 
 void add_new_task(Task& task, DTOTask& dto)
 {
+    DTODate date;
     string state;
     string name;
     string description;
@@ -219,6 +221,8 @@ void add_new_task(Task& task, DTOTask& dto)
     cout << "Enter description: ";
     getline(cin, description);
     task.set_description(description);
+    cin >> date;
+    task.set_create_date(date);
     cout << "Input assignment: ";
     while(true)
     {
@@ -250,7 +254,7 @@ void update()
     int counter = 0;
     while(true)
     {
-        for(int i = 0; i < tasks.size() - 1; i++)
+        for(int i = 0; i < tasks.size() ; i++)
         {
             if(id == to_string(i))
             {

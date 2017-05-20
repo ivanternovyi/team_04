@@ -1,7 +1,25 @@
 #include"DTODate.h"
 
 
-DTODate::DTODate() {};
+DTODate::DTODate(string line)
+{
+	date.set_day(stoi(line.substr(0,2)));
+	date.set_month(stoi(line.substr(3,2)));
+	date.set_year(stoi(line.substr(6,4)));
+	date.set_hour(stoi(line.substr(11,2)));
+	date.set_minute(stoi(line.substr(14,2)));
+	date.set_second(stoi(line.substr(17,2)));
+}
+
+string DTODate::get_string_date()
+{
+	string res;
+	res = to_string(date.get_day()) + "." + to_string(date.get_month())
+		  + "." + to_string(date.get_year()) + " " + to_string(date.get_hour()) + ":" +
+		  to_string(date.get_minute()) + ":" + to_string(date.get_second());
+	return res;
+}
+
 
 istream& operator>>(istream& is, DTODate&d)
 {
@@ -85,7 +103,7 @@ istream& operator>>(istream& is, DTODate&d)
 		break;
 	case 2:
 		switch (b)
-		{	
+		{
 		case 1:
 			if (d.date.get_day() <= 29)
 			{

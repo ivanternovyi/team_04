@@ -1,22 +1,34 @@
 #include "Task.h"
 #include "../DTO/DTOTask.h"
 
+using namespace std;
 
 short Task::get_id()
 {
     DTOTask d;
     vector<Task>  tasks;
     tasks = d.write_from_file();
-    this->id = tasks.size();
+    this->id = (short) tasks.size();
     for(int i = 0; i < tasks.size() - 1; i++)
     {
         if(this->name == tasks[i].get_name())
         {
-            this->id = i;
+            this->id = (short) i;
         }
     }
     return this->id;
 }
+
+void Task::set_create_date(DTODate& obj)
+{
+    create_date = obj;
+}
+
+const char* Task::get_create_date()
+{
+    return create_date.get_string_date().c_str();
+}
+
 
 void Task::set_assignment(short val)
 {
@@ -92,14 +104,19 @@ void Task::parse_line(string line)
     this->state = line.substr(found1+1, found2 - found1 - 1);
     found1 = line.find(",", found2 + 1, 1);
     this->description = line.substr(found2 + 1, found1 - found2 - 1);
-    this->assignment = atoi(line.substr(found1 + 1).c_str());
+    found2 = line.find(",", found1 + 1, 1);
+    this->assignment = (short) stoi(line.substr(found1+1, found2 - found1 - 1));
+    string date;
+    date = line.substr(found2 + 1);
+    DTODate forExchange(date);
+    this->create_date = forExchange;
 }
 
 //overload operator to read line to task
 istream& operator >> (istream& is, Task& task)
 {
     string line;
-    getline(is, line);
+    getline(is,line);
     task.parse_line(line);
     return is;
 }
@@ -113,6 +130,8 @@ ostream& operator << (ostream& os, Task& task)
     os << task.get_description();
     os << ",";
     os << task.get_assignment();
+    os << ",";
+    os << task.get_create_date();
     os <<"\n";
     return os;
 }

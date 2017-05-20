@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "../DTO/DTODate.h"
 
 
 using namespace std;
@@ -17,6 +18,7 @@ private:
     string state;
     string description;
     short assignment;
+    DTODate create_date;
     short counter; //to check status upgrading
 public:
     Task(): state(""), name(""), counter(0), description(""), assignment(0){}
@@ -28,6 +30,10 @@ public:
         this->description = des;
         this->assignment = as;
     }
+
+    void set_create_date(DTODate& obj);
+
+    const char* get_create_date();
 
     void set_assignment(short val);
 

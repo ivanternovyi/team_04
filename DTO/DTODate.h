@@ -11,9 +11,18 @@ class DTODate
 private:
 	Date date;
 public:
-	DTODate();
+	DTODate(){};
 
-	friend istream& operator>>(istream& is, DTODate&d);
+    DTODate(const DTODate& obj)
+    {
+        this->date = obj.date;
+    }
+
+    DTODate(string line);
+
+    string get_string_date();
+
+    friend istream& operator>>(istream& is, DTODate&d);
 
 	friend ostream& operator<<(ostream& os, DTODate&d);
 
