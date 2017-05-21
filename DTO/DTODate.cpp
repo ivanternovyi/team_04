@@ -3,12 +3,12 @@
 
 DTODate::DTODate(string line)
 {
-	date.set_day(stoi(line.substr(0,2)));
-	date.set_month(stoi(line.substr(3,2)));
-	date.set_year(stoi(line.substr(6,4)));
-	date.set_hour(stoi(line.substr(11,2)));
-	date.set_minute(stoi(line.substr(14,2)));
-	date.set_second(stoi(line.substr(17,2)));
+	date.set_day((unsigned short) stoi(line.substr(0,2)));
+	date.set_month((unsigned short) stoi(line.substr(3,2)));
+	date.set_year((unsigned short) stoi(line.substr(6,4)));
+	date.set_hour((unsigned short) stoi(line.substr(11,2)));
+	date.set_minute((unsigned short) stoi(line.substr(14,2)));
+	date.set_second((unsigned short) stoi(line.substr(17,2)));
 }
 
 string DTODate::get_string_date()

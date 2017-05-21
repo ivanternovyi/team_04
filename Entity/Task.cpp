@@ -19,14 +19,14 @@ short Task::get_id()
     return this->id;
 }
 
-void Task::set_create_date(DTODate& obj)
+void Task::set_deadline(DTODate &obj)
 {
-    create_date = obj;
+    deadline = obj;
 }
 
-const char* Task::get_create_date()
+const char* Task::get_deadline()
 {
-    return create_date.get_string_date().c_str();
+    return deadline.get_string_date().c_str();
 }
 
 
@@ -109,7 +109,7 @@ void Task::parse_line(string line)
     string date;
     date = line.substr(found2 + 1);
     DTODate forExchange(date);
-    this->create_date = forExchange;
+    this->deadline = forExchange;
 }
 
 //overload operator to read line to task
@@ -131,7 +131,7 @@ ostream& operator << (ostream& os, Task& task)
     os << ",";
     os << task.get_assignment();
     os << ",";
-    os << task.get_create_date();
+    os << task.get_deadline();
     os <<"\n";
     return os;
 }

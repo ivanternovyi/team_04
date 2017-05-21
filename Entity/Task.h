@@ -18,7 +18,7 @@ private:
     string state;
     string description;
     short assignment;
-    DTODate create_date;
+    DTODate deadline;
     short counter; //to check status upgrading
 public:
     Task(): state(""), name(""), counter(0), description(""), assignment(0){}
@@ -31,9 +31,9 @@ public:
         this->assignment = as;
     }
 
-    void set_create_date(DTODate& obj);
+    void set_deadline(DTODate &obj);
 
-    const char* get_create_date();
+    const char* get_deadline();
 
     void set_assignment(short val);
 

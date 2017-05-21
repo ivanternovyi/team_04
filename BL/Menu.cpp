@@ -162,7 +162,7 @@ void assignment_menu()
 void show_by(string state, int assign)
 {
     vector<Task> tasks(DTOTask::write_from_file());
-    printf("%-5s%-20s%-20s%-20s%-25s%-15s\n", "Id", "Name", "State", "Description", "Date of creation","Assignment");
+    printf("%-5s%-20s%-20s%-20s%-25s%-15s\n", "Id", "Name", "State", "Description", "Date of deadline", "Assignment");
     int counter = 0;
     for (int i = 0; i < tasks.size(); i++)
     {
@@ -174,7 +174,7 @@ void show_by(string state, int assign)
             counter++;
             printf("%-5i%-20s%-20s%-20s%-25s%-15i\n", i, tasks[i].get_name().c_str(),
                    tasks[i].get_state().c_str(), tasks[i].get_description().c_str(),
-                   tasks[i].get_create_date(), tasks[i].get_assignment());
+                   tasks[i].get_deadline(), tasks[i].get_assignment());
         }
         else if(i == tasks.size() - 1 && counter == 0)
         {
@@ -222,7 +222,7 @@ void add_new_task(Task& task, DTOTask& dto)
     getline(cin, description);
     task.set_description(description);
     cin >> date;
-    task.set_create_date(date);
+    task.set_deadline(date);
     cout << "Input assignment: ";
     while(true)
     {
